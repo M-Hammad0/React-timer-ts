@@ -3,7 +3,7 @@ import './Main.css'
 import CalculateTimer from './../../CalculateTimer';
 import Controls from '../Controls/Controls';
 
-const Main = () => {
+const Main: React.FC = (): JSX.Element => {
       const [timeInSeconds, setTimeInSeconds] = useState<number>(0);
       const [timerArray, setTimerArray] = useState<Array<number|string>>([]);
 
