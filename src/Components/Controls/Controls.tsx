@@ -7,7 +7,7 @@ interface Props  {
 const Controls = (props: Props) => {
       const {time} = props;
       const [intervalId, setIntervalId] = useState<number>(0);
-
+      const [click, setClick] = useState<boolean>(false);
 
       const handlePlayButton = () => {
             let interval: any = setInterval(() => {
@@ -26,11 +26,21 @@ const Controls = (props: Props) => {
             time(0);
       }
 
+      const handlePlayButtonState = () => {
+            setClick(true);
+            handlePlayButton();
+      }
+
+      const handleStopButtonState = () => {
+            setClick(false);
+            handleStopButton();
+      }
+
 
       return (
             <div className="controls-container">
-                  <button onClick={handlePlayButton}>Play</button>
-                  <button onClick={handleStopButton}>Stop</button>
+                  <button disabled={click} onClick={handlePlayButtonState}>Play</button>
+                  <button onClick={handleStopButtonState}>Stop</button>
                   <button onClick={handleResetButton}>Reset</button>
             </div>
       )

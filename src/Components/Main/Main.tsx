@@ -4,7 +4,7 @@ import CalculateTimer from './../../CalculateTimer';
 import Controls from '../Controls/Controls';
 
 const Main = () => {
-      const [timeInSeconds, setTimeInSeconds] = useState<number>(1);
+      const [timeInSeconds, setTimeInSeconds] = useState<number>(0);
       const [timerArray, setTimerArray] = useState<Array<number|string>>([]);
 
       useEffect(() => {
