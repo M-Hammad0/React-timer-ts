@@ -1,6 +1,6 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import Control from './Controls'
+import Control,{handlePlayButtonState} from './Controls'
 import { render, cleanup } from '@testing-library/react';
 import setTimeInSeconds from '../Main/Main'
 
@@ -14,4 +14,6 @@ it('render control component',() => {
 it('render control buttons', () => {
       const {getByTestId} = render(<Control time={setTimeInSeconds} />)
       expect(getByTestId('btn-play')).toHaveTextContent('Play')
+      expect(getByTestId('btn-stop')).toHaveTextContent('Stop')
+      expect(getByTestId('btn-reset')).toHaveTextContent('Reset')
 })

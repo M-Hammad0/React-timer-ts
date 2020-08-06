@@ -40,8 +40,8 @@ const Controls = (props: Props) => {
       return (
             <div className="controls-container">
                   <button data-testid="btn-play" disabled={click} onClick={handlePlayButtonState}>Play</button>
-                  <button data-testid="btn" onClick={handleStopButtonState}>Stop</button>
-                  <button data-testid="btn" onClick={handleResetButton}>Reset</button>
+                  <button data-testid="btn-stop" onClick={handleStopButtonState}>Stop</button>
+                  <button data-testid="btn-reset" onClick={handleResetButton}>Reset</button>
             </div>
       )
 }
