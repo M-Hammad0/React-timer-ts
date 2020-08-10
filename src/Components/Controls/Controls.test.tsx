@@ -1,6 +1,6 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-import Control,{handlePlayButtonState} from './Controls'
+import Control from './Controls'
 import { render, cleanup } from '@testing-library/react';
 import setTimeInSeconds from '../Main/Main'
 
